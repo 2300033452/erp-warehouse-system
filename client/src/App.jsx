@@ -12,8 +12,7 @@ import {
 } from "recharts";
 import "./App.css";
 
-const API_BASE = "http://localhost:5000/api";
-
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:5000/api";
 function App() {
   const [page, setPage] = useState("dashboard");
   const [summary, setSummary] = useState(null);
